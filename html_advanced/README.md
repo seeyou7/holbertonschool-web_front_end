@@ -3,7 +3,7 @@
 
 ## Overview
 
-Welcome to the "Advanced HTML - Novice" project! In this project, you will delve into the fundamentals of HTML, focusing on structuring a web page using various HTML tags. The goal is to develop a solid understanding of HTML elements without diving into CSS or styling. The final page may not be visually appealing, but the emphasis is on mastering the core HTML concepts.
+Welcome to this "Advanced HTML - Novice" project! In this project, you will delve into the fundamentals of HTML, focusing on structuring a web page using various HTML tags. The goal is to develop a solid understanding of HTML elements without diving into CSS or styling. The final page may not be visually appealing, but the emphasis is on mastering the core HTML concepts.
 
 **Author:** Younes SABER (GitHub: [seeyou7](https://github.com/seeyou7))
 
