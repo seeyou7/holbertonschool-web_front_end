@@ -1,0 +1,10 @@
+ /*Nested and nested again*/
+ $F-size: 14px;
+ $F-size-H1: 16px;
+ $F-size-class: 12px;
+
+ body{
+    font-size: $F-size;
+    h1 {font-size: $F-size-H1;}
+    h1.smaller{ font-size: $F-size-class;}
+ }
