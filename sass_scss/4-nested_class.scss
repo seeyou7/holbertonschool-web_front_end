@@ -1,0 +1,10 @@
+/*Nested class*/
+$body-CLR: #3D3D3D;
+$class-CLR: #FF0000;
+
+body {
+    color: $body-CLR;
+    .red {
+        color:#FF0000;
+    }
+}
