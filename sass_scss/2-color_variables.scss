@@ -1,0 +1,12 @@
+/*Sass file that assigns: text clor and Bground color*/
+$tx-color: #3D3D3D;
+$BK-color: #6D6D6D;
+
+body, p{
+    color: $tx-color;
+    background-color: $BK-color;
+
+}
+h2 {
+    background-color: $BK-color;
+}
