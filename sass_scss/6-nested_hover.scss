@@ -1,0 +1,10 @@
+/*nested_hover*/
+$button-CLR:#FF0000;
+$hover-CLR: #00FF00;
+
+button{
+    color: $button-CLR;
+    &:hover {
+        color: $hover-CLR;
+    }
+}
