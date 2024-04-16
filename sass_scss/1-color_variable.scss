@@ -1,0 +1,8 @@
+// initialisatio de var pr body et p color
+$main-text-color:#3D3D3D; 
+
+
+// using var
+body, p {
+    color: $main-text-color;   
+}
