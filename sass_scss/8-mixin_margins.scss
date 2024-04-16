@@ -1,12 +1,12 @@
-/*margin mixin*/
-$horiz-margin: 10px;
-$horiz-margin-div: 15px;
-
-body {
-    margin-left: $horiz-margin;
-    margin-right: $horiz-margin;
-}
-div{
-    margin-left: $horiz-margin-div;
-    margin-right: $horiz-margin-div;
-}
+/* Margin mixin */
+@mixin margin_mixin($left, $right) {
+    margin-left: $left;
+    margin-right: $right;
+  }
+  
+  body {
+    @include margin_mixin(10px, 10px);
+  }
+  div {
+    @include margin_mixin(15px, 15px);
+  }
