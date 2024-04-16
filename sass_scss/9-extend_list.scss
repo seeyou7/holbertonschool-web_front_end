@@ -1,0 +1,17 @@
+// Base class for common properties
+.info {
+    font-size: 12px;  // Sets font size for .info and any classes that extend .info
+  }
+  
+  // Class for success messages
+  .success {
+    @extend .info;   // Inherits properties from .info
+    color: #00FF00;  // Specific text color for .success
+  }
+  
+  // Class for warning messages
+  .warning {
+    @extend .info;   // Inherits properties from .info
+    color: #FF0000;  // Specific text color for .warning
+  }
+  
