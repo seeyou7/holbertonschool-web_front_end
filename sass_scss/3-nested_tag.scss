@@ -1,0 +1,12 @@
+/* nested tags*/
+$margin-bk: 0px;
+$padding-bk: 0px;
+$margin-P: 10px;
+
+body{
+    margin: $margin-bk;
+    padding: $padding-bk;
+    p{
+        margin: $margin-P;
+    }
+}
