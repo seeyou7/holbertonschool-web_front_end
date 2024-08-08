@@ -190,15 +190,9 @@
     list-style: none;
   }
   
-  /* .row::after {
-    content: '';
-    display: table;
-    clear: both;
-  } *//* remove acording to task 0*/
-  
+   
   [class*='col-'] {
-    /* float: left; */ /* removed task  */
-    padding: 0.5rem;
+        padding: 0.5rem;
   }
   
   .col-1-3 {
