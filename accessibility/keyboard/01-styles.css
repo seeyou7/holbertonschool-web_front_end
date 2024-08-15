@@ -657,14 +657,9 @@
     transition: var(--transition-duration) var(--transition-cubic-bezier);
   }
   
-  .card-work:hover .card-inner {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
   .card-work .card-title {
     text-align: center;
     margin: 0;
-    
     height: 100%;
     position: relative;
   }
@@ -683,7 +678,6 @@
     background-color: rgba(0, 0, 0, 0.7);
   }
   
-  
   .card-work .card-title a::after {
     position: absolute;
     top: 0;
@@ -693,8 +687,6 @@
     content: '';
   }
   
-  
-  
   @media only screen and (max-width: 767px) {
   
     .card-work .card-inner {
@@ -702,16 +694,12 @@
       position: relative;
     }
   
-    .card-work .card-title {
-      opacity: 1;
-    }
-  
     .card-work .card-title a {
       display: block;
       padding: 2rem 1rem 0 1rem;
+      
     }
   
-      
     .card-work:hover .card-image {
       transform: none;
     }
