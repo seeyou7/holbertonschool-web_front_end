@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>Task 7</title>
+    <!-- jQuery library included from a CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script type="application/javascript">
+        // Function to create the search form
+        function createSearchForm() {
+            // Append the form to the body, with:
+            // - a text input field (for search queries)
+            // - a submit button labeled "Search"
+            // - an unordered list (<ul>) where search results will be displayed
+            $('body').append(
+                $('<form>').append(
+                    $('<input>').attr('type', 'text'),    // Text input for search query
+                    $('<input>').attr('type', 'submit').val('Search'), // Submit button
+                    $('<ul>')    // Empty <ul> element for displaying the search results
+                ).submit(function(e) {
+                    e.preventDefault();   // Prevent default form submission (no page reload)
+                    queryWikipedia($('input[type="text"]').val());  // Call queryWikipedia with the input value
+                })
+            );
+        }
+
+        // Function to add a new article to the <ul> list
+        function addNewArticle(id, title, snippet) {
+            // Append a new list item (<li>) to the <ul> element with:
+            // - The article ID and title inside <span> and <b> tags
+            // - The article snippet (short description) inside a <p> tag
+            $('ul').append(
+                $('<li>').append(
+                    $('<p>').append(
+                        $('<span>').text(id + ' - '),    // Show the article ID with a dash
+                        $('<b>').text(title)    // Show the article title in bold
+                    ),
+                    $('<p>').html(snippet)    // Show the article snippet (HTML)
+                )
+            );
+        }
+
+        // Function to query the Wikipedia API with the user's search input
+        function queryWikipedia(search) {
+            // Perform an AJAX request to Wikipedia's API
+            $.ajax({
+                url: 'https://en.wikipedia.org/w/api.php',    // Wikipedia API endpoint
+                data: {
+                    action: 'query',   // Action is query, meaning we want to search Wikipedia
+                    list: 'search',    // We want a list of search results
+                    srsearch: search,  // The search term (entered by the user)
+                    format: 'json',    // We want the results in JSON format
+                    origin: '*'        // This is to handle CORS issues (Cross-Origin Resource Sharing)
+                },
+                success: function(data) {
+                    // On success, loop through each search result (article)
+                    data.query.search.forEach(function(article) {
+                        // Call addNewArticle for each article in the results
+                        addNewArticle(article.pageid, article.title, article.snippet);
+                    });
+                }
+            });
+        }
+
+        // Call createSearchForm to display the search form when the page loads
+        createSearchForm();
+    </script>
+</body>
+</html>
