@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 0</title>
+</head>
+<body>
+    <h1> Login to the website </h1>
+    <input type="text" id="firstname"  placeholder="Firstname">
+    <input type="text" id="email" placeholder="Email">
+    <button onclick="setCoockies()"> Log me in </button>
+    <button onclick="showCoockies()"> Show the cookies </button>
+<script type="application/javascript">
+    function setCoockies(){
+        const firstname = document.getElementById('firstname').value;
+        document.cookie = `firstname=${firstname}; expires=Wed, 02 Oct 2024 00:00:00 GMT; path=/`;
+
+        const email = document.getElementById('email').value;
+        document.cookie = `email=${email}; expires=Wed, 02 Oct 2024 00:00:00 GMT; path=/` ;
+    }
+
+    function showCoockies() {
+        const p = document.createElement('p');
+        p.textContent = `Cookies: ${document.cookie}`;
+
+        document.body.appendChild(p);
+    }
+
+</script>
+
+</body>
+</html>
