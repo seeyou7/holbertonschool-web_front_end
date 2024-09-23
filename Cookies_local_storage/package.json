@@ -1,0 +1,15 @@
+{
+  "name": "cookies_local_storage",
+  "version": "1.0.0",
+  "description": "This project explores how to use cookies and web storage (local storage and session storage) in JavaScript. It demonstrates cookie manipulation with vanilla JavaScript and the js-cookie library, as well as how to store and retrieve data using both local and session storage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack-dev-server": "^5.1.0"
+  }
+}
