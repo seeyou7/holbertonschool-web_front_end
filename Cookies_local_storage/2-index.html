@@ -29,7 +29,7 @@
 
     function getCookie(name) {
         const cookiearray = document.cookie.split('; ') ;
-        for (let cookie in cookiearray) {
+        for (let cookie of cookiearray) {
             const [cookieName, cookieValue] = cookie.split('=');
             if (cookieName === name) {
                 return cookieValue;
@@ -39,7 +39,7 @@
         return '';
     
     }
-
+    
 </script>
 
 </body>
